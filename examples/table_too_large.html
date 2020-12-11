@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Untitled</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>table_too_large</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14256,14 +14256,57 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
-<span class="o">%</span><span class="k">load_ext</span> blackcellmagic
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">autoreload</span> 2
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">fetcha</span> <span class="k">as</span> <span class="nn">fetcha</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># https://www.ssb.no/en/statbank/list/pasient</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssb</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10261&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14282,11 +14325,8 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload
-The blackcellmagic extension is already loaded. To reload it, use:
-  %reload_ext blackcellmagic
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>INFO:numexpr.utils:NumExpr defaulting to 8 threads.
 </pre>
 </div>
 </div>
@@ -14298,30 +14338,10 @@ The blackcellmagic extension is already loaded. To reload it, use:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">autoreload</span> 2
-<span class="kn">import</span> <span class="nn">fetcha</span> <span class="k">as</span> <span class="nn">fetcha</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Norwegian-API">Norwegian API<a class="anchor-link" href="#Norwegian-API">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssb_10945</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10945&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fltr</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">]}]</span>
 </pre></div>
 
      </div>
@@ -14332,11 +14352,10 @@ The blackcellmagic extension is already loaded. To reload it, use:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get all available periods</span>
-<span class="n">periods</span> <span class="o">=</span> <span class="n">ssb_10945</span><span class="o">.</span><span class="n">periods</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">ssb</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fltr</span><span class="o">=</span><span class="n">fltr</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14347,11 +14366,10 @@ The blackcellmagic extension is already loaded. To reload it, use:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Total number of rows that can be fetched</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_tot</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssb</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14367,121 +14385,7 @@ The blackcellmagic extension is already loaded. To reload it, use:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[78]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1386</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of rows in one period</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_period</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>9</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Returns SSB-object containing data for latest period by default.</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>SSB(table_id=&#39;10945&#39;, language=&#39;no&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look at the data</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -14505,1811 +14409,26 @@ The blackcellmagic extension is already loaded. To reload it, use:
     <tr style="text-align: right;">
       <th></th>
       <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
       <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>2020M10</th>
-      <td>2465888.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M2. Beholdninger (mill. kr)</th>
-      <th>2020M10</th>
-      <td>2638785.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger (mill. kr)</th>
-      <th>2020M10</th>
-      <td>2639552.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M1. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2020M10</th>
-      <td>284198.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M2. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2020M10</th>
-      <td>274456.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2020M10</th>
-      <td>270959.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M1. Tolvmånedersvekst (prosent)</th>
-      <th>2020M10</th>
-      <td>13.1</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M2. Tolvmånedersvekst (prosent)</th>
-      <th>2020M10</th>
-      <td>11.6</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch list of periods</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">([</span><span class="s2">&quot;2019M12&quot;</span><span class="p">,</span> <span class="s2">&quot;2020M01&quot;</span><span class="p">,</span> <span class="s2">&quot;2020M02&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>2019M12</th>
-      <td>2159770.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2183983.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2177656.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M2. Beholdninger (mill. kr)</th>
-      <th>2019M12</th>
-      <td>2345545.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2366374.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2362458.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M3. Beholdninger (mill. kr)</th>
-      <th>2019M12</th>
-      <td>2349246.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2369935.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2366007.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M1. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2019M12</th>
-      <td>65261.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>67827.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>67999.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M2. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2019M12</th>
-      <td>95207.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>89213.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>88323.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M3. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2019M12</th>
-      <td>92019.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>86503.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>85100.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M1. Tolvmånedersvekst (prosent)</th>
-      <th>2019M12</th>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.2</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.3</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M2. Tolvmånedersvekst (prosent)</th>
-      <th>2019M12</th>
-      <td>4.2</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.9</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.9</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>2019M12</th>
-      <td>4.1</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.8</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.8</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch whole year of data</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>2020M01</th>
-      <td>2183983.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2177656.0</td>
-    </tr>
-    <tr>
-      <th>2020M03</th>
-      <td>2302575.0</td>
-    </tr>
-    <tr>
-      <th>2020M04</th>
-      <td>2342854.0</td>
-    </tr>
-    <tr>
-      <th>2020M05</th>
-      <td>2377047.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>2020M06</th>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>9.9</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>10.7</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-<p>90 rows × 1 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch multiple years</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">([</span><span class="s2">&quot;2019&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>2019M01</th>
-      <td>2109179.0</td>
-    </tr>
-    <tr>
-      <th>2019M02</th>
-      <td>2097243.0</td>
-    </tr>
-    <tr>
-      <th>2019M03</th>
-      <td>2123113.0</td>
-    </tr>
-    <tr>
-      <th>2019M04</th>
-      <td>2108575.0</td>
-    </tr>
-    <tr>
-      <th>2019M05</th>
-      <td>2123359.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>2020M06</th>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>9.9</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>10.7</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-<p>198 rows × 1 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and pivot</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>statistikkvariabel</th>
-      <th>Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M1. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M1. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>Pengemengden M2. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M2. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M2. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>Pengemengden M3. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M3. Transaksjoner siste tolv måneder (mill. kr)</th>
-    </tr>
-    <tr>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>2020M01</th>
-      <td>2183983.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2177656.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M03</th>
-      <td>2302575.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M04</th>
-      <td>2342854.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M05</th>
-      <td>2377047.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Pengemengden M3. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>2020M06</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>191747.0</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>236189.0</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>214480.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>253167.0</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>270959.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>90 rows × 9 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and join</span>
-<span class="n">ssb_10948</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10948&quot;</span><span class="p">)</span>
-<span class="n">ssb_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">())</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
       <th></th>
       <th></th>
       <th>statistikkvariabel</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>Pengemengden M1. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M1. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M1. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>Pengemengden M2. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M2. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M2. Transaksjoner siste tolv måneder (mill. kr)</th>
-      <th>Pengemengden M3. Beholdninger (mill. kr)</th>
-      <th>Pengemengden M3. Tolvmånedersvekst (prosent)</th>
-      <th>Pengemengden M3. Transaksjoner siste tolv måneder (mill. kr)</th>
+      <th>Antall dagbehandlinger</th>
+      <th>Antall døgnopphold (utskrivninger)</th>
+      <th>Antall liggedager</th>
+      <th>Antall polikliniske konsultasjoner</th>
+      <th>Pasienter med dagbehandling</th>
+      <th>Pasienter med døgnopphold</th>
+      <th>Pasienter på poliklinikk</th>
+      <th>Pasienter på somatiske sykehus totalt</th>
     </tr>
     <tr>
+      <th>region</th>
+      <th>kjønn</th>
+      <th>alder</th>
+      <th>diagnose: ICD-10-kapittel</th>
       <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th>eiersektor</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Månedsvekst, sesongjustert (prosent)</th>
-      <th rowspan="5" valign="top">2020M01</th>
-      <th>Andre finansielle foretak</th>
-      <td>-60.4</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Husholdninger mv.</th>
-      <td>5.5</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Ikke-finansielle foretak</th>
-      <td>0.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Kommuneforvaltningen</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Pengeholdende sektor</th>
-      <td>-1.8</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th rowspan="5" valign="top">2020M10</th>
-      <th>Andre finansielle foretak</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-11856.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Husholdninger mv.</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>18913.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Ikke-finansielle foretak</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9139.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Kommuneforvaltningen</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4598.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Pengeholdende sektor</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20794.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 12 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and add id-columns.</span>
-<span class="c1"># You might want to pivot on id instead.</span>
-<span class="n">ssb_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020M01&quot;</span><span class="p">,</span> <span class="n">id_cols</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s2">&quot;statistikkvariabel_id&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>statistikkvariabel_id</th>
-      <th>M3SesJust</th>
-      <th>TransSisteMnd</th>
-      <th>TransaksjonMndvekst</th>
-    </tr>
-    <tr>
-      <th>eiersektor</th>
-      <th>statistikkvariabel</th>
-      <th>måned</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="3" valign="top">Andre finansielle foretak</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-60.4</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>131637.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>-10492.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Husholdninger mv.</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.5</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>1363901.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>6041.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Ikke-finansielle foretak</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>770513.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>549.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Kommuneforvaltningen</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>109442.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>273.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Pengeholdende sektor</th>
-      <th>Månedsvekst, sesongjustert (prosent)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-1.8</td>
-    </tr>
-    <tr>
-      <th>Pengemengden M3. Beholdninger, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>2375493.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Transaksjoner siste måned, sesongjustert (mill. kr)</th>
-      <th>2020M01</th>
-      <td>NaN</td>
-      <td>-3629.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="English-API">English API<a class="anchor-link" href="#English-API">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssben_10945</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10945&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get all available periods</span>
-<span class="n">periods</span> <span class="o">=</span> <span class="n">ssben_10945</span><span class="o">.</span><span class="n">periods</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Returns SSB-object containing data for latest period by default.</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>SSB(table_id=&#39;10945&#39;, language=&#39;en&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look at the data</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2465888.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2638785.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2639552.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>284198.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>274456.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>270959.0</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>2020M10</th>
-      <td>13.1</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>2020M10</th>
-      <td>11.6</td>
-    </tr>
-    <tr>
-      <th>Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch list of periods</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">([</span><span class="s2">&quot;2019M12&quot;</span><span class="p">,</span> <span class="s2">&quot;2020M01&quot;</span><span class="p">,</span> <span class="s2">&quot;2020M02&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2019M12</th>
-      <td>2159770.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2183983.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2177656.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2019M12</th>
-      <td>2345545.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2366374.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2362458.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>2019M12</th>
-      <td>2349246.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>2369935.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2366007.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2019M12</th>
-      <td>65261.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>67827.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>67999.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>2019M12</th>
-      <td>95207.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>89213.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>88323.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-      <th>2019M12</th>
-      <td>92019.0</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>86503.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>85100.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>2019M12</th>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.2</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.3</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>2019M12</th>
-      <td>4.2</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.9</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.9</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>2019M12</th>
-      <td>4.1</td>
-    </tr>
-    <tr>
-      <th>2020M01</th>
-      <td>3.8</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.8</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch whole year of data</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M01</th>
-      <td>2183983.0</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>2177656.0</td>
-    </tr>
-    <tr>
-      <th>2020M03</th>
-      <td>2302575.0</td>
-    </tr>
-    <tr>
-      <th>2020M04</th>
-      <td>2342854.0</td>
-    </tr>
-    <tr>
-      <th>2020M05</th>
-      <td>2377047.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>2020M06</th>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>9.9</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>10.7</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-<p>90 rows × 1 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch multiple years</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">([</span><span class="s2">&quot;2019&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2019M01</th>
-      <td>2109179.0</td>
-    </tr>
-    <tr>
-      <th>2019M02</th>
-      <td>2097243.0</td>
-    </tr>
-    <tr>
-      <th>2019M03</th>
-      <td>2123113.0</td>
-    </tr>
-    <tr>
-      <th>2019M04</th>
-      <td>2108575.0</td>
-    </tr>
-    <tr>
-      <th>2019M05</th>
-      <td>2123359.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>2020M06</th>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>9.9</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>10.7</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-<p>198 rows × 1 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and pivot</span>
-<span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>contents</th>
-      <th>Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
+      <th>år</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16322,22 +14441,13 @@ The blackcellmagic extension is already loaded. To reload it, use:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>2020M01</th>
-      <td>3.2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M02</th>
-      <td>3.3</td>
-      <td>NaN</td>
+      <th rowspan="11" valign="top">Hele landet</th>
+      <th rowspan="5" valign="top">Begge kjønn</th>
+      <th rowspan="5" valign="top">0-9 år</th>
+      <th rowspan="5" valign="top">ANDRE OG UOPPGITTE ÅRSAKER TIL SYKEHUSOPPHOLD</th>
+      <th>Antall dagbehandlinger</th>
+      <th>2019</th>
+      <td>2157.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16347,22 +14457,10 @@ The blackcellmagic extension is already loaded. To reload it, use:
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2020M03</th>
-      <td>7.1</td>
+      <th>Antall døgnopphold (utskrivninger)</th>
+      <th>2019</th>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2020M04</th>
-      <td>9.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>50426.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16371,13 +14469,37 @@ The blackcellmagic extension is already loaded. To reload it, use:
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2020M05</th>
-      <td>11.1</td>
+      <th>Antall liggedager</th>
+      <th>2019</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>138897.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Antall polikliniske konsultasjoner</th>
+      <th>2019</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>88218.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Pasienter med dagbehandling</th>
+      <th>2019</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2034.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16385,7 +14507,9 @@ The blackcellmagic extension is already loaded. To reload it, use:
     <tr>
       <th>...</th>
       <th>...</th>
-      <td>...</td>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -16396,56 +14520,59 @@ The blackcellmagic extension is already loaded. To reload it, use:
       <td>...</td>
     </tr>
     <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-      <th>2020M06</th>
+      <th rowspan="5" valign="top">Menn</th>
+      <th rowspan="5" valign="top">Alder i alt</th>
+      <th rowspan="5" valign="top">Ødem, proteinuri og kompl. som følge av hypertensive lidelser v/svangersk, fødsel og barseltid</th>
+      <th>Antall polikliniske konsultasjoner</th>
+      <th>2019</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>191747.0</td>
     </tr>
     <tr>
-      <th>2020M07</th>
+      <th>Pasienter med dagbehandling</th>
+      <th>2019</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>0.0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>236189.0</td>
     </tr>
     <tr>
-      <th>2020M08</th>
+      <th>Pasienter med døgnopphold</th>
+      <th>2019</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>0.0</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>214480.0</td>
     </tr>
     <tr>
-      <th>2020M09</th>
+      <th>Pasienter på poliklinikk</th>
+      <th>2019</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>0.0</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>253167.0</td>
     </tr>
     <tr>
-      <th>2020M10</th>
+      <th>Pasienter på somatiske sykehus totalt</th>
+      <th>2019</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16453,276 +14580,11 @@ The blackcellmagic extension is already loaded. To reload it, use:
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>270959.0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>90 rows × 9 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and join</span>
-<span class="n">ssben_10948</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10948&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
-<span class="n">ssben_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ssben_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">())</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>contents</th>
-      <th>1-month growth, seasonally adjusted (per cent)</th>
-      <th>Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
-      <th>Transactions last month, seasonally adjusted (NOK million)</th>
-      <th>Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>Monetary aggregate M3. 12-month growth (per cent)</th>
-      <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th>holding sector</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">1-month growth, seasonally adjusted (per cent)</th>
-      <th rowspan="5" valign="top">2020M01</th>
-      <th>Households etc.</th>
-      <td>5.5</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Money holding sector</th>
-      <td>-1.8</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Municipal government</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Non-financial corporations</th>
-      <td>0.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Other financial corporations</th>
-      <td>-60.4</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Transactions last month, seasonally adjusted (NOK million)</th>
-      <th rowspan="5" valign="top">2020M10</th>
-      <th>Households etc.</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>18913.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Money holding sector</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20794.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Municipal government</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4598.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Non-financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9139.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Other financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-11856.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 12 columns</p>
+<p>17856 rows × 8 columns</p>
 </div>
 </div>
 

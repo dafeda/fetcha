@@ -34,7 +34,6 @@ class SSB:
         self.url = "https://data.ssb.no/api/v0/{}/table/{}".format(
             self.language, self.table_id
         )
-        self.df = None
         self.levels = pd.read_json(self.url, orient="columns")["variables"]
 
     def __repr__(self):
@@ -153,14 +152,8 @@ class SSB:
         """
         return self._nrows(self._labels())
 
-    def nrows_period(self):
-        """Number of rows in one period.
-        
-        Returns
-        -------
-        int
-        """
-        return self._nrows(self._codes())
+    def nrows_query(self, query):
+        return self._nrows(query)
 
     def _index_cols(self):
         """Columns comprising index.
@@ -194,7 +187,7 @@ class SSB:
 
         return df
 
-    def fetch(self, period=None, id_cols=False):
+    def fetch(self, period=None, id_cols=False, fltr=None):
         """Get data for a set of periods, a single period or latest period.
 
         Parameters
@@ -204,6 +197,7 @@ class SSB:
             If None, get latest.
         id_cols : bool
             If True appends columns containing codes used to call api.
+        fltr : list of dicts
 
         Returns
         -------
@@ -233,6 +227,13 @@ class SSB:
 
         query = []
         for key, val in codes.items():
+            values = None
+            if fltr is not None:
+                for q in fltr:
+                    if key in q.get("code"):
+                        values = q.get("values")
+            if values is not None:
+                val = values
             selection = {"filter": "item", "values": val}
             query.append({"code": key, "selection": selection})
 
@@ -240,12 +241,16 @@ class SSB:
         body["query"] = query
         body["response"] = {"format": "json-stat2"}
 
-        nrows = self.nrows_period()
+        nrows_query = 1
+        for q in query:
+            nrows_query = nrows_query * len(q.get("selection").get("values"))
 
-        # TODO: Not sure how to handle large tables yet.
-        #       The most straight forward way is to let users pass items they want to grab.
-        if nrows >= 10000:
-            logger.warning("Table too large.")
+        if nrows_query >= 300000:
+            logger.warning(
+                "Query exceeds SSB limit of 300k rows per transaction. Current query tries to fetch {} rows. User a filter".format(
+                    nrows_query
+                )
+            )
             return None
 
         req = requests.post(url=self.url, verify=True, json=body)
@@ -260,10 +265,9 @@ class SSB:
         except:
             logger.warning("Duplicates found in index columns. Will not set index.")
 
-        self.df = df
-        return self
+        return df
 
-    def pivot(self, column=None):
+    def pivot(self, df, column=None):
         """Wrapper over pandas pivot_table.
 
         Parameters
@@ -278,7 +282,7 @@ class SSB:
         -------
         df_pivot : pandas dataframe
         """
-        pivot_index = list(self.df.index.names)
+        pivot_index = list(df.index.names)
         # Name of column with variable names depends on language.
         if self.language == "no":
             var_name = "statistikkvariabel"
@@ -288,7 +292,7 @@ class SSB:
         if column is not None:
             var_name = column
 
-        df_pivot = self.df.pivot_table(
+        df_pivot = df.pivot_table(
             index=pivot_index, columns=[var_name], values="value", dropna=False,
         )
         return df_pivot
