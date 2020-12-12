@@ -12,7 +12,6 @@ setup(
     url="https://github.com/dafeda/fetcha",
     author="Feda Curic",
     author_email="feda.curic@gmail.com",
-    license="?",
     packages=find_packages(), 
     include_package_data=True
 )
