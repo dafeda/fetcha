@@ -822,31 +822,3 @@ df_10261.shape
 
 
     (17856, 1)
-
-
-
-
-```python
-df_10261.sample(10)
-```
-
-
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>region</th>
-      <th>sex</th>
-      <th>age</th>
-      <th>diagnosis: Chapter in ICD-10</th>
