@@ -152,6 +152,15 @@ class SSB:
         """
         return self._nrows(self._labels())
 
+    def nrows_period(self):
+        """Number of rows per period.
+
+        Returns
+        -------
+        int
+        """
+        return int(self.nrows_tot() / len(self.periods()))
+
     def nrows_query(self, query):
         return self._nrows(query)
 

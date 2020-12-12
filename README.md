@@ -15,6 +15,35 @@ import fetcha as fetcha
 ssb_10945 = fetcha.SSB("10945", language="en")
 ```
 
+    INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+
+
+
+```python
+# Number of rows in table.
+ssb_10945.nrows_tot()
+```
+
+
+
+
+    1386
+
+
+
+
+```python
+# Number of rows per period.
+ssb_10945.nrows_period()
+```
+
+
+
+
+    9
+
+
+
 
 ```python
 # Get all available periods
@@ -41,7 +70,6 @@ df_latest.head()
 
 
 
-<div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -711,6 +739,71 @@ ssb_10261.levels.iloc[0]
 ```
 
 
+
+
+    {'code': 'Region',
+     'text': 'region',
+     'values': ['0',
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+      '14',
+      '15',
+      '50',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      'F00',
+      '9',
+      'H03',
+      'H04',
+      'H05',
+      'H12',
+      'Uoppgitt'],
+     'valueTexts': ['The whole country',
+      'Østfold (-2019)',
+      'Akershus (-2019)',
+      'Oslo',
+      'Hedmark (-2019)',
+      'Oppland (-2019)',
+      'Buskerud (-2019)',
+      'Vestfold (-2019)',
+      'Telemark (-2019)',
+      'Aust-Agder (-2019)',
+      'Vest-Agder (-2019)',
+      'Rogaland',
+      'Hordaland (-2019)',
+      'Sogn og Fjordane (-2019)',
+      'Møre og Romsdal',
+      'Trøndelag - Trööndelage',
+      'Sør-Trøndelag (-2017)',
+      'Nord-Trøndelag (-2017)',
+      'Nordland',
+      'Troms - Romsa (-2019)',
+      'Finnmark - Finnmárku (-2019)',
+      'Total',
+      'Uoppgitt',
+      'Helseregion Vest',
+      'Helseregion Midt-Norge',
+      'Helseregion Nord',
+      'Helseregion Sør-Øst',
+      'Unknown'],
+     'elimination': True}
+
+
+
+
 ```python
 fltr = [{"code": "Region", "values": ["0"]}]
 ```
@@ -757,97 +850,3 @@ df_10261.sample(10)
       <th>sex</th>
       <th>age</th>
       <th>diagnosis: Chapter in ICD-10</th>
-      <th>contents</th>
-      <th>year</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="10" valign="top">The whole country</th>
-      <th rowspan="3" valign="top">Females</th>
-      <th>0-9 years</th>
-      <th>DISEASES OF THE RESPIRATORY SYSTEM</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>9384.0</td>
-    </tr>
-    <tr>
-      <th>Years, total</th>
-      <th>Diabetes mellitus</th>
-      <th>Number of in-patient stays (discharges)</th>
-      <th>2019</th>
-      <td>1805.0</td>
-    </tr>
-    <tr>
-      <th>0-9 years</th>
-      <th>Diseases of appendix</th>
-      <th>Patients with day cases</th>
-      <th>2019</th>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Both sexes</th>
-      <th>Years, total</th>
-      <th>INFECTIOUS AND PARASITIC DISEASES</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>96790.0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">Females</th>
-      <th>20-39 years</th>
-      <th>Dorsopathies</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>7121.0</td>
-    </tr>
-    <tr>
-      <th>Years, total</th>
-      <th>Other diseases of the musculoskeletal system and connective tissue</th>
-      <th>Number of day cases</th>
-      <th>2019</th>
-      <td>8054.0</td>
-    </tr>
-    <tr>
-      <th>Males</th>
-      <th>Years, total</th>
-      <th>Cholelithiasis</th>
-      <th>Number of in-patient stays (discharges)</th>
-      <th>2019</th>
-      <td>3587.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>10-19 years</th>
-      <th>Other diseases of the respiratory system</th>
-      <th>Patients with day cases</th>
-      <th>2019</th>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>Both sexes</th>
-      <th>0-9 years</th>
-      <th>Cataract</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>Males</th>
-      <th>40-59 years</th>
-      <th>Other diseases of the nervous system</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>21379.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-```python
-
-```

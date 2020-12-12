@@ -4,13 +4,13 @@
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'autoreload')
+get_ipython().run_line_magic("load_ext", "autoreload")
 
 
 # In[2]:
 
 
-get_ipython().run_line_magic('autoreload', '2')
+get_ipython().run_line_magic("autoreload", "2")
 import pandas as pd
 import fetcha as fetcha
 
@@ -46,7 +46,3 @@ ssb.pivot(df)
 
 
 # In[ ]:
-
-
-
-
