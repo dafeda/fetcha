@@ -2,6 +2,8 @@
 
 Talk to SSB using Python.
 
+pip3 install git+https://github.com/dafeda/fetcha.git --upgrade
+
 
 ```python
 import fetcha as fetcha
@@ -14,6 +16,7 @@ import fetcha as fetcha
 # https://www.ssb.no/en/statbank/table/10945
 ssb_10945 = fetcha.SSB("10945", language="en")
 ```
+
 
 
 ```python
@@ -67,6 +70,20 @@ df_latest.head()
 
 
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -123,6 +140,19 @@ df_periods.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -176,6 +206,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -228,6 +271,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -279,6 +335,19 @@ ssb_10945.pivot(df_year)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -465,6 +534,19 @@ df_10948.join(df_year)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -592,6 +674,19 @@ df_10945_id.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -819,3 +914,137 @@ df_10261.shape
 
 
     (17856, 1)
+
+
+
+
+```python
+df_10261.sample(10)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>value</th>
+    </tr>
+    <tr>
+      <th>region</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>diagnosis: Chapter in ICD-10</th>
+      <th>contents</th>
+      <th>year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="10" valign="top">The whole country</th>
+      <th>Females</th>
+      <th>60-69 years</th>
+      <th>Malignant neoplasms of female genital organs</th>
+      <th>Patients with day cases</th>
+      <th>2019</th>
+      <td>205.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Both sexes</th>
+      <th>Years, total</th>
+      <th>INFECTIOUS AND PARASITIC DISEASES</th>
+      <th>In-patients</th>
+      <th>2019</th>
+      <td>16805.0</td>
+    </tr>
+    <tr>
+      <th>10-19 years</th>
+      <th>Malignant neoplasms of lymphoid, haematopoietic related tissue</th>
+      <th>In-patients</th>
+      <th>2019</th>
+      <td>90.0</td>
+    </tr>
+    <tr>
+      <th>Females</th>
+      <th>80 years or older</th>
+      <th>Other diseases of the upper respiratory tract</th>
+      <th>Out-patients</th>
+      <th>2019</th>
+      <td>334.0</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Both sexes</th>
+      <th>40-59 years</th>
+      <th>Influenza and pneumonia</th>
+      <th>In-patients</th>
+      <th>2019</th>
+      <td>3029.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">0-9 years</th>
+      <th>DISEASES OF THE GENITOURINARY SYSTEM</th>
+      <th>Number of bed-days</th>
+      <th>2019</th>
+      <td>3582.0</td>
+    </tr>
+    <tr>
+      <th>Other injuries</th>
+      <th>Number of out-patient consultations</th>
+      <th>2019</th>
+      <td>22775.0</td>
+    </tr>
+    <tr>
+      <th>Females</th>
+      <th>70-79 years</th>
+      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
+      <th>Number of bed-days</th>
+      <th>2019</th>
+      <td>1611.0</td>
+    </tr>
+    <tr>
+      <th>Males</th>
+      <th>40-59 years</th>
+      <th>DISEASES OF THE EYE AND ADNEXA</th>
+      <th>Out-patients</th>
+      <th>2019</th>
+      <td>8837.0</td>
+    </tr>
+    <tr>
+      <th>Females</th>
+      <th>70-79 years</th>
+      <th>DISEASES OF THE CIRCULATORY SYSTEM</th>
+      <th>Number of in-patient stays (discharges)</th>
+      <th>2019</th>
+      <td>11573.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+
+```
