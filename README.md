@@ -22,8 +22,6 @@ import fetcha as fetcha
 ssb_10945 = fetcha.SSB("10945", language="en")
 ```
 
-    INFO:numexpr.utils:NumExpr defaulting to 8 threads.
-
 
 
 ```python
