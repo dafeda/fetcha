@@ -5,7 +5,13 @@
 # 
 # Talk to SSB using Python.
 
-# pip3 install git+https://github.com/dafeda/fetcha.git --upgrade
+# ## Installation
+
+# In[ ]:
+
+
+pip install git+https://github.com/dafeda/fetcha.git --upgrade
+
 
 # In[1]:
 
