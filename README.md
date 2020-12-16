@@ -2,7 +2,12 @@
 
 Talk to SSB using Python.
 
-pip3 install git+https://github.com/dafeda/fetcha.git --upgrade
+## Installation
+
+
+```python
+pip install git+https://github.com/dafeda/fetcha.git --upgrade
+```
 
 
 ```python
@@ -16,6 +21,8 @@ import fetcha as fetcha
 # https://www.ssb.no/en/statbank/table/10945
 ssb_10945 = fetcha.SSB("10945", language="en")
 ```
+
+    INFO:numexpr.utils:NumExpr defaulting to 8 threads.
 
 
 
