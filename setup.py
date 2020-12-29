@@ -13,5 +13,6 @@ setup(
     author="Feda Curic",
     author_email="feda.curic@gmail.com",
     packages=find_packages(), 
-    include_package_data=True
+    include_package_data=True,
+    install_requires=["pyjstat"],
 )
