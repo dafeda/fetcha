@@ -14262,6 +14262,37 @@ a.anchor-link {
 <h1 id="fetcha">fetcha<a class="anchor-link" href="#fetcha">&#182;</a></h1><p>Talk to SSB using Python.</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> blackcellmagic
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fetcha</span> <span class="k">as</span> <span class="nn">fetcha</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="c1"># Turn off INFO-warnings</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14273,7 +14304,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dafeda</span><span class="o">/</span><span class="n">fetcha</span><span class="o">.</span><span class="n">git</span> <span class="o">--</span><span class="n">upgrade</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &gt;&gt; pip install git+https://github.com/dafeda/fetcha.git --upgrade</span>
 </pre></div>
 
      </div>
@@ -14284,21 +14315,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fetcha</span> <span class="k">as</span> <span class="nn">fetcha</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Instantiate object with specific table_id that refers to a SSB-table.</span>
@@ -14312,73 +14329,14 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>INFO:numexpr.utils:NumExpr defaulting to 8 threads.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of rows in table.</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_tot</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1386</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of rows per period.</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_period</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of rows in table.</span>
+<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_tot</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14400,7 +14358,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>9</pre>
+<pre>1395</pre>
 </div>
 
 </div>
@@ -14415,9 +14373,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get all available periods</span>
-<span class="n">periods</span> <span class="o">=</span> <span class="n">ssb_10945</span><span class="o">.</span><span class="n">periods</span><span class="p">()</span>
-<span class="n">periods</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of rows per period.</span>
+<span class="n">ssb_10945</span><span class="o">.</span><span class="n">nrows_period</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14439,7 +14396,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;2020M04&#39;, &#39;2020M05&#39;, &#39;2020M06&#39;, &#39;2020M07&#39;, &#39;2020M08&#39;, &#39;2020M09&#39;, &#39;2020M10&#39;]</pre>
+<pre>9</pre>
 </div>
 
 </div>
@@ -14452,6 +14409,45 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get all available periods</span>
+<span class="n">periods</span> <span class="o">=</span> <span class="n">ssb_10945</span><span class="o">.</span><span class="n">periods</span><span class="p">()</span>
+<span class="n">periods</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;2020M05&#39;, &#39;2020M06&#39;, &#39;2020M07&#39;, &#39;2020M08&#39;, &#39;2020M09&#39;, &#39;2020M10&#39;, &#39;2020M11&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch latest period.</span>
@@ -14474,7 +14470,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14509,28 +14505,28 @@ a.anchor-link {
   <tbody>
     <tr>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2465888.0</td>
+      <th>2020M11</th>
+      <td>2485877.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2638785.0</td>
+      <th>2020M11</th>
+      <td>2656368.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2639552.0</td>
+      <th>2020M11</th>
+      <td>2658168.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>284198.0</td>
+      <th>2020M11</th>
+      <td>300287.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>274456.0</td>
+      <th>2020M11</th>
+      <td>286364.0</td>
     </tr>
   </tbody>
 </table>
@@ -14817,8 +14813,9 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pivot helper function - a thin wrapper over pandas&#39; pivot_table.</span>
-<span class="n">ssb_10945</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">df_year</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reset index before pivoting</span>
+<span class="n">df_year</span> <span class="o">=</span> <span class="n">df_year</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;contents&quot;</span><span class="p">)</span>
+<span class="n">df_year</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14849,14 +14846,21 @@ a.anchor-link {
         vertical-align: top;
     }
 
-    .dataframe thead th {
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
         text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
+      <th colspan="9" halign="left">value</th>
+    </tr>
+    <tr>
       <th>contents</th>
       <th>Monetary aggregate M1. 12-month growth (per cent</th>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
@@ -14869,7 +14873,6 @@ a.anchor-link {
       <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
     </tr>
     <tr>
-      <th>contents</th>
       <th>month</th>
       <th></th>
       <th></th>
@@ -14884,143 +14887,67 @@ a.anchor-link {
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M1. 12-month growth (per cent</th>
       <th>2020M01</th>
       <td>3.2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2183983.0</td>
+      <td>67827.0</td>
+      <td>3.9</td>
+      <td>2366374.0</td>
+      <td>89213.0</td>
+      <td>3.8</td>
+      <td>2369935.0</td>
+      <td>86503.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
       <td>3.3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2177656.0</td>
+      <td>67999.0</td>
+      <td>3.9</td>
+      <td>2362458.0</td>
+      <td>88323.0</td>
+      <td>3.8</td>
+      <td>2366007.0</td>
+      <td>85100.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
       <td>7.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2302575.0</td>
+      <td>150339.0</td>
+      <td>7.5</td>
+      <td>2491535.0</td>
+      <td>172563.0</td>
+      <td>7.4</td>
+      <td>2494933.0</td>
+      <td>169831.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
       <td>9.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2342854.0</td>
+      <td>207753.0</td>
+      <td>9.6</td>
+      <td>2524788.0</td>
+      <td>218422.0</td>
+      <td>9.5</td>
+      <td>2528204.0</td>
+      <td>216825.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
       <td>11.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-      <th>2020M06</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>191747.0</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>236189.0</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>214480.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>253167.0</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>270959.0</td>
+      <td>2377047.0</td>
+      <td>234673.0</td>
+      <td>10.3</td>
+      <td>2554949.0</td>
+      <td>236943.0</td>
+      <td>10.2</td>
+      <td>2558258.0</td>
+      <td>234366.0</td>
     </tr>
   </tbody>
 </table>
-<p>90 rows × 9 columns</p>
 </div>
 </div>
 
@@ -15030,18 +14957,28 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and join</span>
-<span class="c1"># Get another table so we have something to join with.</span>
-<span class="n">ssb_10948</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10948&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
-<span class="n">df_10948</span> <span class="o">=</span> <span class="n">ssb_10948</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">ssb_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssb_10948</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10948&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+<span class="n">df_10948</span> <span class="o">=</span> <span class="n">ssb_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">df_10948</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_year</span><span class="p">)</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_10948</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15057,7 +14994,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15082,108 +15019,40 @@ a.anchor-link {
       <th></th>
       <th></th>
       <th></th>
-      <th>1-month growth, seasonally adjusted (per cent)</th>
-      <th>Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
-      <th>Transactions last month, seasonally adjusted (NOK million)</th>
       <th>value</th>
     </tr>
     <tr>
+      <th>holding sector</th>
       <th>contents</th>
       <th>month</th>
-      <th>holding sector</th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">1-month growth, seasonally adjusted (per cent)</th>
-      <th rowspan="5" valign="top">2020M01</th>
-      <th>Households etc.</th>
-      <td>5.5</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th rowspan="5" valign="top">Money holding sector</th>
+      <th rowspan="5" valign="top">Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
+      <th>2020M01</th>
+      <td>2375314.0</td>
     </tr>
     <tr>
-      <th>Money holding sector</th>
-      <td>-1.8</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M02</th>
+      <td>2390118.0</td>
     </tr>
     <tr>
-      <th>Municipal government</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M03</th>
+      <td>2501374.0</td>
     </tr>
     <tr>
-      <th>Non-financial corporations</th>
-      <td>0.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M04</th>
+      <td>2546104.0</td>
     </tr>
     <tr>
-      <th>Other financial corporations</th>
-      <td>-60.4</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Transactions last month, seasonally adjusted (NOK million)</th>
-      <th rowspan="5" valign="top">2020M10</th>
-      <th>Households etc.</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>18913.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Money holding sector</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20794.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Municipal government</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4598.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Non-financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9139.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Other financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-11856.0</td>
-      <td>NaN</td>
+      <th>2020M05</th>
+      <td>2582335.0</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 4 columns</p>
 </div>
 </div>
 
@@ -15191,21 +15060,6 @@ a.anchor-link {
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use id when pivoting for prettier column names.</span>
-<span class="n">df_10945_id</span> <span class="o">=</span> <span class="n">ssb_10945</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">ssb_10945</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="s2">&quot;contents_id&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15214,7 +15068,15 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_10945_id</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetch and join</span>
+<span class="c1"># Get another table so we have something to join with.</span>
+<span class="n">ssb_10948</span> <span class="o">=</span> <span class="n">fetcha</span><span class="o">.</span><span class="n">SSB</span><span class="p">(</span><span class="s2">&quot;10948&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+<span class="n">df_10948</span> <span class="o">=</span> <span class="n">ssb_10948</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span>
+<span class="n">df_10948</span> <span class="o">=</span> <span class="n">df_10948</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;contents&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span>
+<span class="p">)</span>
+
+<span class="n">df_10948</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_year</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15245,28 +15107,40 @@ a.anchor-link {
         vertical-align: top;
     }
 
-    .dataframe thead th {
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
         text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
-      <th>contents_id</th>
-      <th>M1TolvMndVekst</th>
-      <th>M2TolvMndVekst</th>
-      <th>M3TolvMndVekst</th>
-      <th>PengMengdtransM1</th>
-      <th>PengmengdBehM1</th>
-      <th>PengmengdBehM2</th>
-      <th>PengmengdBehM3</th>
-      <th>PengmengdTransM2</th>
-      <th>PengmengdTransM3</th>
+      <th colspan="12" halign="left">value</th>
     </tr>
     <tr>
       <th>contents</th>
+      <th>1-month growth, seasonally adjusted (per cent)</th>
+      <th>Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
+      <th>Transactions last month, seasonally adjusted (NOK million)</th>
+      <th>Monetary aggregate M1. 12-month growth (per cent</th>
+      <th>Monetary aggregate M1. Stocks (NOK million)</th>
+      <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
+      <th>Monetary aggregate M2. 12-month growth (per cent)</th>
+      <th>Monetary aggregate M2. Stocks (NOK million)</th>
+      <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
+      <th>Monetary aggregate M3. 12-month growth (per cent)</th>
+      <th>Monetary aggregate M3. Stocks (NOK million)</th>
+      <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
+    </tr>
+    <tr>
       <th>month</th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -15280,69 +15154,79 @@ a.anchor-link {
   </thead>
   <tbody>
     <tr>
-      <th>Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>2020M10</th>
-      <td>13.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M01</th>
+      <td>-10.54</td>
+      <td>950125.6</td>
+      <td>-1419.8</td>
+      <td>3.2</td>
+      <td>2183983.0</td>
+      <td>67827.0</td>
+      <td>3.9</td>
+      <td>2366374.0</td>
+      <td>89213.0</td>
+      <td>3.8</td>
+      <td>2369935.0</td>
+      <td>86503.0</td>
     </tr>
     <tr>
-      <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2465888.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M02</th>
+      <td>4.64</td>
+      <td>956047.2</td>
+      <td>3677.4</td>
+      <td>3.3</td>
+      <td>2177656.0</td>
+      <td>67999.0</td>
+      <td>3.9</td>
+      <td>2362458.0</td>
+      <td>88323.0</td>
+      <td>3.8</td>
+      <td>2366007.0</td>
+      <td>85100.0</td>
     </tr>
     <tr>
-      <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>284198.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M03</th>
+      <td>521.06</td>
+      <td>1000549.6</td>
+      <td>38143.8</td>
+      <td>7.1</td>
+      <td>2302575.0</td>
+      <td>150339.0</td>
+      <td>7.5</td>
+      <td>2491535.0</td>
+      <td>172563.0</td>
+      <td>7.4</td>
+      <td>2494933.0</td>
+      <td>169831.0</td>
     </tr>
     <tr>
-      <th>Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>11.6</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M04</th>
+      <td>22.56</td>
+      <td>1018441.6</td>
+      <td>19292.4</td>
+      <td>9.9</td>
+      <td>2342854.0</td>
+      <td>207753.0</td>
+      <td>9.6</td>
+      <td>2524788.0</td>
+      <td>218422.0</td>
+      <td>9.5</td>
+      <td>2528204.0</td>
+      <td>216825.0</td>
     </tr>
     <tr>
-      <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2638785.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2020M05</th>
+      <td>14.30</td>
+      <td>1032934.0</td>
+      <td>17314.6</td>
+      <td>11.1</td>
+      <td>2377047.0</td>
+      <td>234673.0</td>
+      <td>10.3</td>
+      <td>2554949.0</td>
+      <td>236943.0</td>
+      <td>10.2</td>
+      <td>2558258.0</td>
+      <td>234366.0</td>
     </tr>
   </tbody>
 </table>
@@ -15371,7 +15255,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
@@ -15384,27 +15268,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>WARNING:fetcha.ssb:Query exceeds SSB limit of 300k rows per transaction. Current query tries to fetch 499968 rows. User a filter
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15678,80 +15541,77 @@ Name: variables, dtype: object</pre>
   <tbody>
     <tr>
       <th rowspan="10" valign="top">The whole country</th>
-      <th>Females</th>
-      <th>60-69 years</th>
-      <th>Malignant neoplasms of female genital organs</th>
+      <th rowspan="4" valign="top">Females</th>
+      <th>40-59 years</th>
+      <th>Parkinson's disease</th>
       <th>Patients with day cases</th>
       <th>2019</th>
-      <td>205.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>Years, total</th>
+      <th>Diseases of appendix</th>
+      <th>Number of in-patient stays (discharges)</th>
+      <th>2019</th>
+      <td>3173.0</td>
+    </tr>
+    <tr>
+      <th>60-69 years</th>
+      <th>Dorsopathies</th>
+      <th>Number of out-patient consultations</th>
+      <th>2019</th>
+      <td>9237.0</td>
+    </tr>
+    <tr>
+      <th>0-9 years</th>
+      <th>Delivery</th>
+      <th>Number of out-patient consultations</th>
+      <th>2019</th>
+      <td>0.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Both sexes</th>
-      <th>Years, total</th>
-      <th>INFECTIOUS AND PARASITIC DISEASES</th>
-      <th>In-patients</th>
+      <th rowspan="2" valign="top">40-59 years</th>
+      <th>Arthrosis</th>
+      <th>Number of day cases</th>
       <th>2019</th>
-      <td>16805.0</td>
+      <td>1859.0</td>
+    </tr>
+    <tr>
+      <th>Melanoma and other malignant neoplasms of skin</th>
+      <th>Patients at general hospital, in total</th>
+      <th>2019</th>
+      <td>3276.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Females</th>
+      <th>Years, total</th>
+      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
+      <th>Out-patients</th>
+      <th>2019</th>
+      <td>11339.0</td>
+    </tr>
+    <tr>
+      <th>40-59 years</th>
+      <th>Acute myocardial infarction</th>
+      <th>Patients at general hospital, in total</th>
+      <th>2019</th>
+      <td>440.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Both sexes</th>
+      <th>20-39 years</th>
+      <th>Influenza and pneumonia</th>
+      <th>Number of in-patient stays (discharges)</th>
+      <th>2019</th>
+      <td>1695.0</td>
     </tr>
     <tr>
       <th>10-19 years</th>
-      <th>Malignant neoplasms of lymphoid, haematopoietic related tissue</th>
-      <th>In-patients</th>
-      <th>2019</th>
-      <td>90.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>80 years or older</th>
-      <th>Other diseases of the upper respiratory tract</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>334.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Both sexes</th>
-      <th>40-59 years</th>
-      <th>Influenza and pneumonia</th>
-      <th>In-patients</th>
-      <th>2019</th>
-      <td>3029.0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">0-9 years</th>
-      <th>DISEASES OF THE GENITOURINARY SYSTEM</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>3582.0</td>
-    </tr>
-    <tr>
-      <th>Other injuries</th>
+      <th>Non-infective enteritis and colitis</th>
       <th>Number of out-patient consultations</th>
       <th>2019</th>
-      <td>22775.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>70-79 years</th>
-      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>1611.0</td>
-    </tr>
-    <tr>
-      <th>Males</th>
-      <th>40-59 years</th>
-      <th>DISEASES OF THE EYE AND ADNEXA</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>8837.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>70-79 years</th>
-      <th>DISEASES OF THE CIRCULATORY SYSTEM</th>
-      <th>Number of in-patient stays (discharges)</th>
-      <th>2019</th>
-      <td>11573.0</td>
+      <td>7595.0</td>
     </tr>
   </tbody>
 </table>

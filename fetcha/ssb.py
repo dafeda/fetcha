@@ -275,33 +275,3 @@ class SSB:
             logger.warning("Duplicates found in index columns. Will not set index.")
 
         return df
-
-    def pivot(self, df, column=None):
-        """Wrapper over pandas pivot_table.
-
-        Parameters
-        ----------
-        columns : str
-            Which column to create new columns from.
-            By default it's 'statistikkvariabel' when language is 'no',
-            and 'contents' when language is 'en'.
-            You might for example want to use 'statistikkvariabel_id' or 
-            'contents_id' instead, as they might make for better columns names.
-        Returns
-        -------
-        df_pivot : pandas dataframe
-        """
-        pivot_index = list(df.index.names)
-        # Name of column with variable names depends on language.
-        if self.language == "no":
-            var_name = "statistikkvariabel"
-        else:
-            var_name = "contents"
-
-        if column is not None:
-            var_name = column
-
-        df_pivot = df.pivot_table(
-            index=pivot_index, columns=[var_name], values="value", dropna=False,
-        )
-        return df_pivot

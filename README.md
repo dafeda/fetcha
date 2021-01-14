@@ -2,16 +2,19 @@
 
 Talk to SSB using Python.
 
+
+```python
+import fetcha as fetcha
+import logging
+# Turn off INFO-warnings
+logging.getLogger().setLevel(logging.CRITICAL)
+```
+
 ## Installation
 
 
 ```python
 pip install git+https://github.com/dafeda/fetcha.git --upgrade
-```
-
-
-```python
-import fetcha as fetcha
 ```
 
 
@@ -23,7 +26,6 @@ ssb_10945 = fetcha.SSB("10945", language="en")
 ```
 
 
-
 ```python
 # Number of rows in table.
 ssb_10945.nrows_tot()
@@ -32,7 +34,7 @@ ssb_10945.nrows_tot()
 
 
 
-    1386
+    1395
 
 
 
@@ -59,7 +61,7 @@ periods[-7:]
 
 
 
-    ['2020M04', '2020M05', '2020M06', '2020M07', '2020M08', '2020M09', '2020M10']
+    ['2020M05', '2020M06', '2020M07', '2020M08', '2020M09', '2020M10', '2020M11']
 
 
 
@@ -76,6 +78,19 @@ df_latest.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -92,28 +107,28 @@ df_latest.head()
   <tbody>
     <tr>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2465888.0</td>
+      <th>2020M11</th>
+      <td>2485877.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2638785.0</td>
+      <th>2020M11</th>
+      <td>2656368.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>2639552.0</td>
+      <th>2020M11</th>
+      <td>2658168.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>284198.0</td>
+      <th>2020M11</th>
+      <td>300287.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>274456.0</td>
+      <th>2020M11</th>
+      <td>286364.0</td>
     </tr>
   </tbody>
 </table>
@@ -132,6 +147,19 @@ df_periods.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -185,6 +213,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -237,6 +278,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -280,18 +334,39 @@ df_year.head()
 
 
 ```python
-# Pivot helper function - a thin wrapper over pandas' pivot_table.
-ssb_10945.pivot(df_year)
+# Reset index before pivoting
+df_year = df_year.reset_index().pivot(index="month", columns="contents")
+df_year.head()
 ```
 
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
+      <th colspan="9" halign="left">value</th>
+    </tr>
+    <tr>
       <th>contents</th>
       <th>Monetary aggregate M1. 12-month growth (per cent</th>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
@@ -304,7 +379,6 @@ ssb_10945.pivot(df_year)
       <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
     </tr>
     <tr>
-      <th>contents</th>
       <th>month</th>
       <th></th>
       <th></th>
@@ -319,143 +393,139 @@ ssb_10945.pivot(df_year)
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M1. 12-month growth (per cent</th>
       <th>2020M01</th>
       <td>3.2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2183983.0</td>
+      <td>67827.0</td>
+      <td>3.9</td>
+      <td>2366374.0</td>
+      <td>89213.0</td>
+      <td>3.8</td>
+      <td>2369935.0</td>
+      <td>86503.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
       <td>3.3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2177656.0</td>
+      <td>67999.0</td>
+      <td>3.9</td>
+      <td>2362458.0</td>
+      <td>88323.0</td>
+      <td>3.8</td>
+      <td>2366007.0</td>
+      <td>85100.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
       <td>7.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2302575.0</td>
+      <td>150339.0</td>
+      <td>7.5</td>
+      <td>2491535.0</td>
+      <td>172563.0</td>
+      <td>7.4</td>
+      <td>2494933.0</td>
+      <td>169831.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
       <td>9.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>2342854.0</td>
+      <td>207753.0</td>
+      <td>9.6</td>
+      <td>2524788.0</td>
+      <td>218422.0</td>
+      <td>9.5</td>
+      <td>2528204.0</td>
+      <td>216825.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
       <td>11.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
-      <th>2020M06</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>191747.0</td>
-    </tr>
-    <tr>
-      <th>2020M07</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>236189.0</td>
-    </tr>
-    <tr>
-      <th>2020M08</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>214480.0</td>
-    </tr>
-    <tr>
-      <th>2020M09</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>253167.0</td>
-    </tr>
-    <tr>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>270959.0</td>
+      <td>2377047.0</td>
+      <td>234673.0</td>
+      <td>10.3</td>
+      <td>2554949.0</td>
+      <td>236943.0</td>
+      <td>10.2</td>
+      <td>2558258.0</td>
+      <td>234366.0</td>
     </tr>
   </tbody>
 </table>
-<p>90 rows × 9 columns</p>
+</div>
+
+
+
+
+```python
+ssb_10948 = fetcha.SSB("10948", language="en")
+df_10948 = ssb_10948.fetch("2020")
+```
+
+
+```python
+df_10948.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>value</th>
+    </tr>
+    <tr>
+      <th>holding sector</th>
+      <th>contents</th>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Money holding sector</th>
+      <th rowspan="5" valign="top">Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
+      <th>2020M01</th>
+      <td>2375314.0</td>
+    </tr>
+    <tr>
+      <th>2020M02</th>
+      <td>2390118.0</td>
+    </tr>
+    <tr>
+      <th>2020M03</th>
+      <td>2501374.0</td>
+    </tr>
+    <tr>
+      <th>2020M04</th>
+      <td>2546104.0</td>
+    </tr>
+    <tr>
+      <th>2020M05</th>
+      <td>2582335.0</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 
@@ -465,236 +535,147 @@ ssb_10945.pivot(df_year)
 # Fetch and join
 # Get another table so we have something to join with.
 ssb_10948 = fetcha.SSB("10948", language="en")
-df_10948 = ssb_10948.pivot(ssb_10948.fetch("2020"))
+df_10948 = ssb_10948.fetch("2020")
+df_10948 = df_10948.reset_index().pivot_table(
+    index="month", columns="contents", aggfunc="mean"
+)
 
-df_10948.join(df_year)
+df_10948.join(df_year).head()
 ```
 
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
-      <th></th>
-      <th></th>
+      <th colspan="12" halign="left">value</th>
+    </tr>
+    <tr>
+      <th>contents</th>
       <th>1-month growth, seasonally adjusted (per cent)</th>
       <th>Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
       <th>Transactions last month, seasonally adjusted (NOK million)</th>
-      <th>value</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th>holding sector</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">1-month growth, seasonally adjusted (per cent)</th>
-      <th rowspan="5" valign="top">2020M01</th>
-      <th>Households etc.</th>
-      <td>5.5</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Money holding sector</th>
-      <td>-1.8</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Municipal government</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Non-financial corporations</th>
-      <td>0.9</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Other financial corporations</th>
-      <td>-60.4</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">Transactions last month, seasonally adjusted (NOK million)</th>
-      <th rowspan="5" valign="top">2020M10</th>
-      <th>Households etc.</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>18913.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Money holding sector</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20794.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Municipal government</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4598.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Non-financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9139.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Other financial corporations</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-11856.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 4 columns</p>
-</div>
-
-
-
-
-```python
-# Use id when pivoting for prettier column names.
-df_10945_id = ssb_10945.pivot(ssb_10945.fetch(id_cols=True), "contents_id")
-```
-
-
-```python
-df_10945_id.head()
-```
-
-
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>contents_id</th>
-      <th>M1TolvMndVekst</th>
-      <th>M2TolvMndVekst</th>
-      <th>M3TolvMndVekst</th>
-      <th>PengMengdtransM1</th>
-      <th>PengmengdBehM1</th>
-      <th>PengmengdBehM2</th>
-      <th>PengmengdBehM3</th>
-      <th>PengmengdTransM2</th>
-      <th>PengmengdTransM3</th>
-    </tr>
-    <tr>
-      <th>contents</th>
-      <th>month</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
       <th>Monetary aggregate M1. 12-month growth (per cent</th>
-      <th>2020M10</th>
-      <td>13.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2465888.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
       <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>284198.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
       <th>Monetary aggregate M2. 12-month growth (per cent)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>11.6</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>Monetary aggregate M2. Stocks (NOK million)</th>
+      <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
+      <th>Monetary aggregate M3. 12-month growth (per cent)</th>
+      <th>Monetary aggregate M3. Stocks (NOK million)</th>
+      <th>Monetary aggregate M3. Transactions last 12 months (NOK million)</th>
     </tr>
     <tr>
-      <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2638785.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>month</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020M01</th>
+      <td>-10.54</td>
+      <td>950125.6</td>
+      <td>-1419.8</td>
+      <td>3.2</td>
+      <td>2183983.0</td>
+      <td>67827.0</td>
+      <td>3.9</td>
+      <td>2366374.0</td>
+      <td>89213.0</td>
+      <td>3.8</td>
+      <td>2369935.0</td>
+      <td>86503.0</td>
+    </tr>
+    <tr>
+      <th>2020M02</th>
+      <td>4.64</td>
+      <td>956047.2</td>
+      <td>3677.4</td>
+      <td>3.3</td>
+      <td>2177656.0</td>
+      <td>67999.0</td>
+      <td>3.9</td>
+      <td>2362458.0</td>
+      <td>88323.0</td>
+      <td>3.8</td>
+      <td>2366007.0</td>
+      <td>85100.0</td>
+    </tr>
+    <tr>
+      <th>2020M03</th>
+      <td>521.06</td>
+      <td>1000549.6</td>
+      <td>38143.8</td>
+      <td>7.1</td>
+      <td>2302575.0</td>
+      <td>150339.0</td>
+      <td>7.5</td>
+      <td>2491535.0</td>
+      <td>172563.0</td>
+      <td>7.4</td>
+      <td>2494933.0</td>
+      <td>169831.0</td>
+    </tr>
+    <tr>
+      <th>2020M04</th>
+      <td>22.56</td>
+      <td>1018441.6</td>
+      <td>19292.4</td>
+      <td>9.9</td>
+      <td>2342854.0</td>
+      <td>207753.0</td>
+      <td>9.6</td>
+      <td>2524788.0</td>
+      <td>218422.0</td>
+      <td>9.5</td>
+      <td>2528204.0</td>
+      <td>216825.0</td>
+    </tr>
+    <tr>
+      <th>2020M05</th>
+      <td>14.30</td>
+      <td>1032934.0</td>
+      <td>17314.6</td>
+      <td>11.1</td>
+      <td>2377047.0</td>
+      <td>234673.0</td>
+      <td>10.3</td>
+      <td>2554949.0</td>
+      <td>236943.0</td>
+      <td>10.2</td>
+      <td>2558258.0</td>
+      <td>234366.0</td>
     </tr>
   </tbody>
 </table>
@@ -714,9 +695,6 @@ ssb_10261 = fetcha.SSB("10261", language="en")
 # Gives warning and returns None.
 df_10261 = ssb_10261.fetch()
 ```
-
-    WARNING:fetcha.ssb:Query exceeds SSB limit of 300k rows per transaction. Current query tries to fetch 499968 rows. User a filter
-
 
 
 ```python
@@ -840,6 +818,19 @@ df_10261.sample(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -864,80 +855,77 @@ df_10261.sample(10)
   <tbody>
     <tr>
       <th rowspan="10" valign="top">The whole country</th>
-      <th>Females</th>
-      <th>60-69 years</th>
-      <th>Malignant neoplasms of female genital organs</th>
+      <th rowspan="4" valign="top">Females</th>
+      <th>40-59 years</th>
+      <th>Parkinson's disease</th>
       <th>Patients with day cases</th>
       <th>2019</th>
-      <td>205.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>Years, total</th>
+      <th>Diseases of appendix</th>
+      <th>Number of in-patient stays (discharges)</th>
+      <th>2019</th>
+      <td>3173.0</td>
+    </tr>
+    <tr>
+      <th>60-69 years</th>
+      <th>Dorsopathies</th>
+      <th>Number of out-patient consultations</th>
+      <th>2019</th>
+      <td>9237.0</td>
+    </tr>
+    <tr>
+      <th>0-9 years</th>
+      <th>Delivery</th>
+      <th>Number of out-patient consultations</th>
+      <th>2019</th>
+      <td>0.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Both sexes</th>
-      <th>Years, total</th>
-      <th>INFECTIOUS AND PARASITIC DISEASES</th>
-      <th>In-patients</th>
+      <th rowspan="2" valign="top">40-59 years</th>
+      <th>Arthrosis</th>
+      <th>Number of day cases</th>
       <th>2019</th>
-      <td>16805.0</td>
+      <td>1859.0</td>
+    </tr>
+    <tr>
+      <th>Melanoma and other malignant neoplasms of skin</th>
+      <th>Patients at general hospital, in total</th>
+      <th>2019</th>
+      <td>3276.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Females</th>
+      <th>Years, total</th>
+      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
+      <th>Out-patients</th>
+      <th>2019</th>
+      <td>11339.0</td>
+    </tr>
+    <tr>
+      <th>40-59 years</th>
+      <th>Acute myocardial infarction</th>
+      <th>Patients at general hospital, in total</th>
+      <th>2019</th>
+      <td>440.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Both sexes</th>
+      <th>20-39 years</th>
+      <th>Influenza and pneumonia</th>
+      <th>Number of in-patient stays (discharges)</th>
+      <th>2019</th>
+      <td>1695.0</td>
     </tr>
     <tr>
       <th>10-19 years</th>
-      <th>Malignant neoplasms of lymphoid, haematopoietic related tissue</th>
-      <th>In-patients</th>
-      <th>2019</th>
-      <td>90.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>80 years or older</th>
-      <th>Other diseases of the upper respiratory tract</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>334.0</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">Both sexes</th>
-      <th>40-59 years</th>
-      <th>Influenza and pneumonia</th>
-      <th>In-patients</th>
-      <th>2019</th>
-      <td>3029.0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">0-9 years</th>
-      <th>DISEASES OF THE GENITOURINARY SYSTEM</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>3582.0</td>
-    </tr>
-    <tr>
-      <th>Other injuries</th>
+      <th>Non-infective enteritis and colitis</th>
       <th>Number of out-patient consultations</th>
       <th>2019</th>
-      <td>22775.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>70-79 years</th>
-      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
-      <th>Number of bed-days</th>
-      <th>2019</th>
-      <td>1611.0</td>
-    </tr>
-    <tr>
-      <th>Males</th>
-      <th>40-59 years</th>
-      <th>DISEASES OF THE EYE AND ADNEXA</th>
-      <th>Out-patients</th>
-      <th>2019</th>
-      <td>8837.0</td>
-    </tr>
-    <tr>
-      <th>Females</th>
-      <th>70-79 years</th>
-      <th>DISEASES OF THE CIRCULATORY SYSTEM</th>
-      <th>Number of in-patient stays (discharges)</th>
-      <th>2019</th>
-      <td>11573.0</td>
+      <td>7595.0</td>
     </tr>
   </tbody>
 </table>

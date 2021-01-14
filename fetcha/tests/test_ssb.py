@@ -2,38 +2,20 @@ import random
 import time
 
 import fetcha as fetcha
+from pyjstat import pyjstat
 
 
-def test_fetch_n_pivot_lst_months_no():
-    time.sleep(random.randint(1, 5))
-    ssb_10948 = fetcha.SSB("10948")
-    periods = ["2019M12", "2020M01"]
-    df = ssb_10948.fetch(periods)
-    df = ssb_10948.pivot(df)
-    assert df.shape[1] == 3
-    assert list(df.index.names) == ["eiersektor", "statistikkvariabel", "måned"]
-    assert df.index.get_level_values("måned").unique().to_list() == periods
+def test_against_ssb_made_data():
+    df_ssb = pyjstat.Dataset.read(
+        "https://data.ssb.no/api/v0/dataset/934513.json?lang=no"
+    )
+    df_ssb = df_ssb.write("dataframe")
+    df_ssb = df_ssb.pivot(index="år", columns="statistikkvariabel", values="value")
 
-
-def test_fetch_n_pivot_lst_months_en():
-    time.sleep(random.randint(1, 5))
-    ssb_10948 = fetcha.SSB("10948", language="en")
-    periods = ["2019M12", "2020M01"]
-    df = ssb_10948.fetch(periods)
-    df = ssb_10948.pivot(df)
-    assert df.shape[1] == 3
-    assert list(df.index.names) == ["holding sector", "contents", "month"]
-    assert df.index.get_level_values("month").unique().to_list() == periods
-
-
-def test_fetch_n_pivot_lst_year_no():
-    time.sleep(random.randint(1, 5))
-    ssb_10948 = fetcha.SSB("10948")
-    periods = "2019"
-    df = ssb_10948.fetch(periods)
-    df = ssb_10948.pivot(df)
-    assert df.shape[1] == 3
-    assert list(df.index.names) == ["eiersektor", "statistikkvariabel", "måned"]
-    assert df.index.get_level_values("måned").unique().to_list() == [
-        "2019M" + str(i).zfill(2) for i in range(1, 13)
-    ]
+    ssb_12880 = fetcha.SSB("12880", language="no")
+    periods = ssb_12880.periods()
+    df_fetcha = ssb_12880.fetch(periods)
+    df_fetcha = df_fetcha.reset_index().pivot(
+        index="år", columns="statistikkvariabel", values="value"
+    )
+    assert df_ssb.equals(df_fetcha)

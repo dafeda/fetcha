@@ -5,21 +5,30 @@
 # 
 # Talk to SSB using Python.
 
+# In[1]:
+
+
+get_ipython().run_line_magic('load_ext', 'blackcellmagic')
+
+
+# In[2]:
+
+
+import fetcha as fetcha
+import logging
+# Turn off INFO-warnings
+logging.getLogger().setLevel(logging.CRITICAL)
+
+
 # ## Installation
 
 # In[ ]:
 
 
-pip install git+https://github.com/dafeda/fetcha.git --upgrade
+# >> pip install git+https://github.com/dafeda/fetcha.git --upgrade
 
 
-# In[1]:
-
-
-import fetcha as fetcha
-
-
-# In[2]:
+# In[3]:
 
 
 # Instantiate object with specific table_id that refers to a SSB-table.
@@ -28,21 +37,21 @@ import fetcha as fetcha
 ssb_10945 = fetcha.SSB("10945", language="en")
 
 
-# In[3]:
+# In[4]:
 
 
 # Number of rows in table.
 ssb_10945.nrows_tot()
 
 
-# In[4]:
+# In[5]:
 
 
 # Number of rows per period.
 ssb_10945.nrows_period()
 
 
-# In[5]:
+# In[6]:
 
 
 # Get all available periods
@@ -50,7 +59,7 @@ periods = ssb_10945.periods()
 periods[-7:]
 
 
-# In[6]:
+# In[7]:
 
 
 # Fetch latest period.
@@ -87,32 +96,36 @@ df_year.head()
 # In[11]:
 
 
-# Pivot helper function - a thin wrapper over pandas' pivot_table.
-ssb_10945.pivot(df_year)
+# Reset index before pivoting
+df_year = df_year.reset_index().pivot(index="month", columns="contents")
+df_year.head()
 
 
 # In[12]:
 
 
-# Fetch and join
-# Get another table so we have something to join with.
 ssb_10948 = fetcha.SSB("10948", language="en")
-df_10948 = ssb_10948.pivot(ssb_10948.fetch("2020"))
-
-df_10948.join(df_year)
+df_10948 = ssb_10948.fetch("2020")
 
 
 # In[13]:
 
 
-# Use id when pivoting for prettier column names.
-df_10945_id = ssb_10945.pivot(ssb_10945.fetch(id_cols=True), "contents_id")
+df_10948.head()
 
 
 # In[14]:
 
 
-df_10945_id.head()
+# Fetch and join
+# Get another table so we have something to join with.
+ssb_10948 = fetcha.SSB("10948", language="en")
+df_10948 = ssb_10948.fetch("2020")
+df_10948 = df_10948.reset_index().pivot_table(
+    index="month", columns="contents", aggfunc="mean"
+)
+
+df_10948.join(df_year).head()
 
 
 # In[15]:
