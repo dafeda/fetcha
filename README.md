@@ -7,14 +7,14 @@ Talk to SSB using Python.
 import fetcha as fetcha
 import logging
 # Turn off INFO-warnings
-logging.getLogger().setLevel(logging.CRITICAL)
+logging.getLogger().setLevel(logging.WARNING)
 ```
 
 ## Installation
 
 
 ```python
-pip install git+https://github.com/dafeda/fetcha.git --upgrade
+# >> pip install git+https://github.com/dafeda/fetcha.git --upgrade
 ```
 
 
@@ -34,7 +34,7 @@ ssb_10945.nrows_tot()
 
 
 
-    1395
+    1422
 
 
 
@@ -61,7 +61,7 @@ periods[-7:]
 
 
 
-    ['2020M05', '2020M06', '2020M07', '2020M08', '2020M09', '2020M10', '2020M11']
+    ['2020M08', '2020M09', '2020M10', '2020M11', '2020M12', '2021M01', '2021M02']
 
 
 
@@ -78,6 +78,19 @@ df_latest.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -94,28 +107,28 @@ df_latest.head()
   <tbody>
     <tr>
       <th>Monetary aggregate M1. Stocks (NOK million)</th>
-      <th>2020M11</th>
-      <td>2485877.0</td>
+      <th>2021M02</th>
+      <td>2526071.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Stocks (NOK million)</th>
-      <th>2020M11</th>
-      <td>2656368.0</td>
+      <th>2021M02</th>
+      <td>2695383.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M3. Stocks (NOK million)</th>
-      <th>2020M11</th>
-      <td>2658168.0</td>
+      <th>2021M02</th>
+      <td>2697783.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M1. Transactions last 12 months (NOK million)</th>
-      <th>2020M11</th>
-      <td>300287.0</td>
+      <th>2021M02</th>
+      <td>359029.0</td>
     </tr>
     <tr>
       <th>Monetary aggregate M2. Transactions last 12 months (NOK million)</th>
-      <th>2020M11</th>
-      <td>286364.0</td>
+      <th>2021M02</th>
+      <td>343687.0</td>
     </tr>
   </tbody>
 </table>
@@ -134,6 +147,19 @@ df_periods.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -155,11 +181,11 @@ df_periods.head()
     </tr>
     <tr>
       <th>2020M01</th>
-      <td>2183983.0</td>
+      <td>2182450.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>2177656.0</td>
+      <td>2175681.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Monetary aggregate M2. Stocks (NOK million)</th>
@@ -168,7 +194,7 @@ df_periods.head()
     </tr>
     <tr>
       <th>2020M01</th>
-      <td>2366374.0</td>
+      <td>2364841.0</td>
     </tr>
   </tbody>
 </table>
@@ -187,6 +213,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -204,23 +243,23 @@ df_year.head()
     <tr>
       <th rowspan="5" valign="top">Monetary aggregate M1. Stocks (NOK million)</th>
       <th>2020M01</th>
-      <td>2183983.0</td>
+      <td>2182450.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>2177656.0</td>
+      <td>2175681.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
-      <td>2302575.0</td>
+      <td>2300443.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
-      <td>2342854.0</td>
+      <td>2340381.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
-      <td>2377047.0</td>
+      <td>2374607.0</td>
     </tr>
   </tbody>
 </table>
@@ -239,6 +278,19 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -256,23 +308,23 @@ df_year.head()
     <tr>
       <th rowspan="5" valign="top">Monetary aggregate M1. Stocks (NOK million)</th>
       <th>2020M01</th>
-      <td>2183983.0</td>
+      <td>2182450.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>2177656.0</td>
+      <td>2175681.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
-      <td>2302575.0</td>
+      <td>2300443.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
-      <td>2342854.0</td>
+      <td>2340381.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
-      <td>2377047.0</td>
+      <td>2374607.0</td>
     </tr>
   </tbody>
 </table>
@@ -291,6 +343,23 @@ df_year.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -325,63 +394,63 @@ df_year.head()
   <tbody>
     <tr>
       <th>2020M01</th>
-      <td>3.2</td>
-      <td>2183983.0</td>
-      <td>67827.0</td>
+      <td>3.1</td>
+      <td>2182450.0</td>
+      <td>66236.0</td>
       <td>3.9</td>
-      <td>2366374.0</td>
-      <td>89213.0</td>
-      <td>3.8</td>
-      <td>2369935.0</td>
-      <td>86503.0</td>
+      <td>2364841.0</td>
+      <td>87622.0</td>
+      <td>3.7</td>
+      <td>2368402.0</td>
+      <td>84912.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>3.3</td>
-      <td>2177656.0</td>
-      <td>67999.0</td>
-      <td>3.9</td>
-      <td>2362458.0</td>
-      <td>88323.0</td>
+      <td>3.2</td>
+      <td>2175681.0</td>
+      <td>66037.0</td>
       <td>3.8</td>
-      <td>2366007.0</td>
-      <td>85100.0</td>
+      <td>2360484.0</td>
+      <td>86360.0</td>
+      <td>3.7</td>
+      <td>2364033.0</td>
+      <td>83138.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
-      <td>7.1</td>
-      <td>2302575.0</td>
-      <td>150339.0</td>
+      <td>7.0</td>
+      <td>2300443.0</td>
+      <td>148469.0</td>
       <td>7.5</td>
-      <td>2491535.0</td>
-      <td>172563.0</td>
-      <td>7.4</td>
-      <td>2494933.0</td>
-      <td>169831.0</td>
+      <td>2489403.0</td>
+      <td>170692.0</td>
+      <td>7.3</td>
+      <td>2492801.0</td>
+      <td>167960.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
-      <td>9.9</td>
-      <td>2342854.0</td>
-      <td>207753.0</td>
-      <td>9.6</td>
-      <td>2524788.0</td>
-      <td>218422.0</td>
+      <td>9.8</td>
+      <td>2340381.0</td>
+      <td>205486.0</td>
       <td>9.5</td>
-      <td>2528204.0</td>
-      <td>216825.0</td>
+      <td>2522315.0</td>
+      <td>216155.0</td>
+      <td>9.4</td>
+      <td>2525731.0</td>
+      <td>214558.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
-      <td>11.1</td>
-      <td>2377047.0</td>
-      <td>234673.0</td>
-      <td>10.3</td>
-      <td>2554949.0</td>
-      <td>236943.0</td>
+      <td>10.9</td>
+      <td>2374607.0</td>
+      <td>232311.0</td>
       <td>10.2</td>
-      <td>2558258.0</td>
-      <td>234366.0</td>
+      <td>2552508.0</td>
+      <td>234581.0</td>
+      <td>10.1</td>
+      <td>2555817.0</td>
+      <td>232003.0</td>
     </tr>
   </tbody>
 </table>
@@ -404,6 +473,19 @@ df_10948.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -424,23 +506,23 @@ df_10948.head()
       <th rowspan="5" valign="top">Money holding sector</th>
       <th rowspan="5" valign="top">Monetary aggregate M3. Stocks, seasonally adjusted (NOK million)</th>
       <th>2020M01</th>
-      <td>2375314.0</td>
+      <td>2374459.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>2390118.0</td>
+      <td>2387955.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
-      <td>2501374.0</td>
+      <td>2499994.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
-      <td>2546104.0</td>
+      <td>2543868.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
-      <td>2582335.0</td>
+      <td>2580435.0</td>
     </tr>
   </tbody>
 </table>
@@ -465,6 +547,23 @@ df_10948.join(df_year).head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -505,78 +604,78 @@ df_10948.join(df_year).head()
   <tbody>
     <tr>
       <th>2020M01</th>
-      <td>-10.54</td>
-      <td>950125.6</td>
-      <td>-1419.8</td>
-      <td>3.2</td>
-      <td>2183983.0</td>
-      <td>67827.0</td>
+      <td>-10.02</td>
+      <td>949783.6</td>
+      <td>-1329.8</td>
+      <td>3.1</td>
+      <td>2182450.0</td>
+      <td>66236.0</td>
       <td>3.9</td>
-      <td>2366374.0</td>
-      <td>89213.0</td>
-      <td>3.8</td>
-      <td>2369935.0</td>
-      <td>86503.0</td>
+      <td>2364841.0</td>
+      <td>87622.0</td>
+      <td>3.7</td>
+      <td>2368402.0</td>
+      <td>84912.0</td>
     </tr>
     <tr>
       <th>2020M02</th>
-      <td>4.64</td>
-      <td>956047.2</td>
-      <td>3677.4</td>
-      <td>3.3</td>
-      <td>2177656.0</td>
-      <td>67999.0</td>
-      <td>3.9</td>
-      <td>2362458.0</td>
-      <td>88323.0</td>
+      <td>3.32</td>
+      <td>955182.0</td>
+      <td>3182.0</td>
+      <td>3.2</td>
+      <td>2175681.0</td>
+      <td>66037.0</td>
       <td>3.8</td>
-      <td>2366007.0</td>
-      <td>85100.0</td>
+      <td>2360484.0</td>
+      <td>86360.0</td>
+      <td>3.7</td>
+      <td>2364033.0</td>
+      <td>83138.0</td>
     </tr>
     <tr>
       <th>2020M03</th>
-      <td>521.06</td>
-      <td>1000549.6</td>
-      <td>38143.8</td>
-      <td>7.1</td>
-      <td>2302575.0</td>
-      <td>150339.0</td>
+      <td>541.24</td>
+      <td>999997.4</td>
+      <td>38556.4</td>
+      <td>7.0</td>
+      <td>2300443.0</td>
+      <td>148469.0</td>
       <td>7.5</td>
-      <td>2491535.0</td>
-      <td>172563.0</td>
-      <td>7.4</td>
-      <td>2494933.0</td>
-      <td>169831.0</td>
+      <td>2489403.0</td>
+      <td>170692.0</td>
+      <td>7.3</td>
+      <td>2492801.0</td>
+      <td>167960.0</td>
     </tr>
     <tr>
       <th>2020M04</th>
-      <td>22.56</td>
-      <td>1018441.6</td>
-      <td>19292.4</td>
-      <td>9.9</td>
-      <td>2342854.0</td>
-      <td>207753.0</td>
-      <td>9.6</td>
-      <td>2524788.0</td>
-      <td>218422.0</td>
+      <td>19.36</td>
+      <td>1017547.0</td>
+      <td>18928.0</td>
+      <td>9.8</td>
+      <td>2340381.0</td>
+      <td>205486.0</td>
       <td>9.5</td>
-      <td>2528204.0</td>
-      <td>216825.0</td>
+      <td>2522315.0</td>
+      <td>216155.0</td>
+      <td>9.4</td>
+      <td>2525731.0</td>
+      <td>214558.0</td>
     </tr>
     <tr>
       <th>2020M05</th>
-      <td>14.30</td>
-      <td>1032934.0</td>
-      <td>17314.6</td>
-      <td>11.1</td>
-      <td>2377047.0</td>
-      <td>234673.0</td>
-      <td>10.3</td>
-      <td>2554949.0</td>
-      <td>236943.0</td>
+      <td>14.82</td>
+      <td>1032174.2</td>
+      <td>17398.2</td>
+      <td>10.9</td>
+      <td>2374607.0</td>
+      <td>232311.0</td>
       <td>10.2</td>
-      <td>2558258.0</td>
-      <td>234366.0</td>
+      <td>2552508.0</td>
+      <td>234581.0</td>
+      <td>10.1</td>
+      <td>2555817.0</td>
+      <td>232003.0</td>
     </tr>
   </tbody>
 </table>
@@ -596,6 +695,9 @@ ssb_10261 = fetcha.SSB("10261", language="en")
 # Gives warning and returns None.
 df_10261 = ssb_10261.fetch()
 ```
+
+    WARNING:fetcha.ssb:Query exceeds SSB limit of 300k rows per transaction. Current query tries to fetch 607104 rows. User a filter
+    
 
 
 ```python
@@ -629,17 +731,22 @@ ssb_10261.levels.iloc[0]
     {'code': 'Region',
      'text': 'region',
      'values': ['0',
+      '30',
       '01',
       '02',
       '03',
+      '34',
       '04',
       '05',
       '06',
+      '38',
       '07',
       '08',
+      '42',
       '09',
       '10',
       '11',
+      '46',
       '12',
       '14',
       '15',
@@ -647,6 +754,7 @@ ssb_10261.levels.iloc[0]
       '16',
       '17',
       '18',
+      '54',
       '19',
       '20',
       'F00',
@@ -657,17 +765,22 @@ ssb_10261.levels.iloc[0]
       'H12',
       'Uoppgitt'],
      'valueTexts': ['The whole country',
+      'Viken',
       'Østfold (-2019)',
       'Akershus (-2019)',
       'Oslo',
+      'Innlandet',
       'Hedmark (-2019)',
       'Oppland (-2019)',
       'Buskerud (-2019)',
+      'Vestfold og Telemark',
       'Vestfold (-2019)',
       'Telemark (-2019)',
+      'Agder',
       'Aust-Agder (-2019)',
       'Vest-Agder (-2019)',
       'Rogaland',
+      'Vestland',
       'Hordaland (-2019)',
       'Sogn og Fjordane (-2019)',
       'Møre og Romsdal',
@@ -675,6 +788,7 @@ ssb_10261.levels.iloc[0]
       'Sør-Trøndelag (-2017)',
       'Nord-Trøndelag (-2017)',
       'Nordland',
+      'Troms og Finnmark - Romsa ja Finnmárku',
       'Troms - Romsa (-2019)',
       'Finnmark - Finnmárku (-2019)',
       'Total',
@@ -719,6 +833,19 @@ df_10261.sample(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -743,77 +870,78 @@ df_10261.sample(10)
   <tbody>
     <tr>
       <th rowspan="10" valign="top">The whole country</th>
-      <th rowspan="4" valign="top">Females</th>
+      <th>Males</th>
       <th>40-59 years</th>
-      <th>Parkinson's disease</th>
-      <th>Patients with day cases</th>
-      <th>2019</th>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>Years, total</th>
-      <th>Diseases of appendix</th>
-      <th>Number of in-patient stays (discharges)</th>
-      <th>2019</th>
-      <td>3173.0</td>
-    </tr>
-    <tr>
-      <th>60-69 years</th>
-      <th>Dorsopathies</th>
-      <th>Number of out-patient consultations</th>
-      <th>2019</th>
-      <td>9237.0</td>
-    </tr>
-    <tr>
-      <th>0-9 years</th>
-      <th>Delivery</th>
-      <th>Number of out-patient consultations</th>
-      <th>2019</th>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">Both sexes</th>
-      <th rowspan="2" valign="top">40-59 years</th>
-      <th>Arthrosis</th>
+      <th>Influenza and pneumonia</th>
       <th>Number of day cases</th>
       <th>2019</th>
-      <td>1859.0</td>
-    </tr>
-    <tr>
-      <th>Melanoma and other malignant neoplasms of skin</th>
-      <th>Patients at general hospital, in total</th>
-      <th>2019</th>
-      <td>3276.0</td>
+      <td>76.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Females</th>
-      <th>Years, total</th>
-      <th>In situ neoplasms and neoplasms of uncertain or unknown behaviour</th>
-      <th>Out-patients</th>
+      <th>20-39 years</th>
+      <th>Injuries of upper extremities</th>
+      <th>Patients with day cases</th>
       <th>2019</th>
-      <td>11339.0</td>
+      <td>613.0</td>
     </tr>
     <tr>
-      <th>40-59 years</th>
-      <th>Acute myocardial infarction</th>
-      <th>Patients at general hospital, in total</th>
+      <th>60-69 years</th>
+      <th>CONGENITAL MALFORMATIONS</th>
+      <th>Number of bed-days</th>
       <th>2019</th>
-      <td>440.0</td>
+      <td>290.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Both sexes</th>
-      <th>20-39 years</th>
-      <th>Influenza and pneumonia</th>
-      <th>Number of in-patient stays (discharges)</th>
+      <th rowspan="2" valign="top">20-39 years</th>
+      <th>Cardiac dysrhythmias</th>
+      <th>Patients with day cases</th>
       <th>2019</th>
-      <td>1695.0</td>
+      <td>276.0</td>
     </tr>
     <tr>
-      <th>10-19 years</th>
-      <th>Non-infective enteritis and colitis</th>
+      <th>PREGNANCY, CHILDBIRTH AND THE PUERPERIUM</th>
       <th>Number of out-patient consultations</th>
       <th>2019</th>
-      <td>7595.0</td>
+      <td>109637.0</td>
+    </tr>
+    <tr>
+      <th>Females</th>
+      <th>60-69 years</th>
+      <th>Glaucoma</th>
+      <th>Number of day cases</th>
+      <th>2019</th>
+      <td>253.0</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Both sexes</th>
+      <th>Years, total</th>
+      <th>Other maternal disorders predominantly related to pregnancy</th>
+      <th>In-patients</th>
+      <th>2019</th>
+      <td>1478.0</td>
+    </tr>
+    <tr>
+      <th>60-69 years</th>
+      <th>Diabetes mellitus</th>
+      <th>In-patients</th>
+      <th>2019</th>
+      <td>488.0</td>
+    </tr>
+    <tr>
+      <th>70-79 years</th>
+      <th>Other diseases of oesophagus, stomach and duodenum</th>
+      <th>Number of bed-days</th>
+      <th>2019</th>
+      <td>3265.0</td>
+    </tr>
+    <tr>
+      <th>0-9 years</th>
+      <th>Malignant neoplasms of female genital organs</th>
+      <th>Out-patients</th>
+      <th>2019</th>
+      <td>1.0</td>
     </tr>
   </tbody>
 </table>
