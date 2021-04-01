@@ -8,21 +8,15 @@
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'blackcellmagic')
-
-
-# In[2]:
-
-
 import fetcha as fetcha
 import logging
 # Turn off INFO-warnings
-logging.getLogger().setLevel(logging.CRITICAL)
+logging.getLogger().setLevel(logging.WARNING)
 
 
 # ## Installation
 
-# In[ ]:
+# In[2]:
 
 
 # >> pip install git+https://github.com/dafeda/fetcha.git --upgrade
