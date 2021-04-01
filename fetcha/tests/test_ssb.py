@@ -1,6 +1,3 @@
-import random
-import time
-
 import fetcha as fetcha
 from pyjstat import pyjstat
 
