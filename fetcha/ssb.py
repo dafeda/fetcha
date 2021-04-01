@@ -1,6 +1,6 @@
+import warnings
 import logging
 import requests
-import json
 
 import numpy as np
 import pandas as pd
@@ -230,7 +230,6 @@ class SSB:
                     periods.append(per)
 
         codes = self._codes()
-        labels = self._labels()
 
         codes["Tid"] = periods
 
@@ -255,7 +254,7 @@ class SSB:
             nrows_query = nrows_query * len(q.get("selection").get("values"))
 
         if nrows_query >= 300000:
-            logger.warning(
+            warnings.warn(
                 "Query exceeds SSB limit of 300k rows per transaction. Current query tries to fetch {} rows. User a filter".format(
                     nrows_query
                 )
